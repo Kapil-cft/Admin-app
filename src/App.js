@@ -1,22 +1,22 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-import {useState } from "react";
+import "./App.css"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBarstick from "./components/navbar";
 import Main from "./components/main";
-import Dashboard from "./components/dashboard";
+import Dashboard from "./container/dashboard";
+import User from "./container/user";
 function App() {
 
 
 
   return (
     <div className="App">
-    <NavBarstick/>
         <BrowserRouter>
+    <NavBarstick/>
           <Routes>
-            <Route path="/" element={    <Main/>} />
+            <Route path="/" element={<Main/>} />
              <Route path="/dashboard" element={<Dashboard/>}/>  
+             <Route path="/user" element={<User/>}/>
+
           </Routes>
         </BrowserRouter>
     
